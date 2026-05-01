@@ -7,9 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Palette warna diambil persis dari referensi logo */
-            --bg-color: #FDFBF5; /* Warm Cream */
-            --primary-color: #0B3D34; /* Deep Forest Green */
+            --bg-color: #FDFBF5; 
+            --primary-color: #0B3D34; 
             --border-light: rgba(11, 61, 52, 0.2);
         }
 
@@ -18,20 +17,17 @@
         
         .container { max-width: 650px; margin: 0 auto; padding: 0 24px; }
         
-        /* Typography Header: Padding top diperbesar agar tidak mepet atas */
-        header { text-align: center; padding: 120px 0 50px; }
+        /* FIX: Menambahkan .container agar perintah padding-top menang dan tidak ter-reset jadi 0 */
+        header.container { text-align: center; padding-top: 120px; padding-bottom: 50px; }
         header h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 5px; text-transform: uppercase; line-height: 1; }
         header p { font-size: 0.95rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; }
         
         .service-category { margin-top: 55px; }
         .service-category h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; text-transform: uppercase; letter-spacing: 1.5px; }
-        
-        /* Ikon bintang (✦) dari logo sebagai ornamen judul */
         .service-category h2::before { content: "✦"; margin-right: 12px; font-size: 1.1rem; }
         
         .section-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-bottom: 25px; display: block; border-left: 2px solid var(--border-light); padding-left: 12px; }
         
-        /* Gaya Clean & Flat (Outline Style) */
         .card { border: 1.5px solid var(--primary-color); padding: 25px 30px; border-radius: 12px; }
         .card h3 { font-size: 0.9rem; font-weight: 700; margin: 25px 0 10px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px; }
         .card h3:first-child { margin-top: 0; }
@@ -41,7 +37,6 @@
         ul li:last-child { border-bottom: none; padding-bottom: 0; }
         ul li strong { font-weight: 700; font-size: 1.05rem; }
 
-        /* Block Terms and Conditions */
         .terms { margin-top: 70px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
         .terms h4 { margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; }
         .terms h4::before { content: "✦"; margin-right: 12px; font-size: 1rem; color: var(--bg-color); }
@@ -50,9 +45,8 @@
         
         footer { text-align: center; padding: 20px 0 50px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
 
-        /* Penyesuaian untuk HP biar jaraknya proporsional */
         @media (max-width: 480px) {
-            header { padding: 80px 0 40px; } /* Di HP jaraknya gak perlu sejauh di laptop */
+            header.container { padding-top: 80px; padding-bottom: 40px; }
             header h1 { font-size: 2.4rem; }
             header p { font-size: 0.75rem; letter-spacing: 3px; }
             .card { padding: 20px; }
