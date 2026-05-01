@@ -17,12 +17,11 @@
         
         .container { max-width: 650px; margin: 0 auto; padding: 0 24px; }
         
-        /* JARAK DIPANGKAS DRASTIS: padding-top dan padding-bottom dikecilkan */
+        /* Padding Header yang Ringkas */
         header.container { text-align: center; padding-top: 35px; padding-bottom: 20px; }
         header h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 5px; text-transform: uppercase; line-height: 1; }
         header p { font-size: 0.95rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; }
         
-        /* Jarak ke kategori (Single Feed dll) ditarik ke atas agar tidak renggang */
         .service-category { margin-top: 35px; }
         .service-category h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; text-transform: uppercase; letter-spacing: 1.5px; }
         .service-category h2::before { content: "✦"; margin-right: 12px; font-size: 1.1rem; }
@@ -38,11 +37,15 @@
         ul li:last-child { border-bottom: none; padding-bottom: 0; }
         ul li strong { font-weight: 700; font-size: 1.05rem; }
 
+        /* Block Terms and Conditions */
         .terms { margin-top: 50px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
-        .terms h4 { margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; }
-        .terms h4::before { content: "✦"; margin-right: 12px; font-size: 1rem; color: var(--bg-color); }
-        .terms ul li { border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; padding: 12px 0; }
+        .terms h4 { margin-bottom: 15px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; color: var(--bg-color); opacity: 0.9; }
+        .terms h4::before { content: "✦"; margin-right: 10px; font-size: 0.9rem; color: var(--bg-color); }
+        
+        /* Penyesuaian List untuk T&C agar teks panjang turun dengan rapi */
+        .terms ul li { display: block; border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; padding: 12px 0; line-height: 1.6; }
         .terms ul li:last-child { border: none; padding-bottom: 0; }
+        .terms ul li strong { font-size: 0.85rem; color: #FDFBF5; letter-spacing: 0.5px; }
         
         footer { text-align: center; padding: 10px 0 40px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
 
@@ -118,12 +121,21 @@
             </div>
         </section>
 
+        <!-- Terms and Conditions Diperbarui -->
         <section class="terms">
-            <h4>Syarat & Ketentuan</h4>
+            <h4>Ketentuan Umum & Pengerjaan</h4>
             <ul>
-                <li>DP 50% di awal pengerjaan.</li>
-                <li>Estimasi pengerjaan sesuai antrean dan tingkat kesulitan.</li>
-                <li>File master dikirim setelah pelunasan.</li>
+                <li>• Pengerjaan dimulai setelah konfirmasi pembayaran dan seluruh materi (brief, foto, referensi) diterima.</li>
+                <li>• Revisi maksimal 3x minor per desain (tidak mengubah konsep awal).</li>
+                <li>• Hasil akhir dikirim dalam format resolusi tinggi (JPG/PNG). Permintaan master file dikenakan biaya tambahan.</li>
+            </ul>
+
+            <h4 style="margin-top: 35px;">Sistem Pembayaran & Paket</h4>
+            <ul>
+                <li>• <strong>Layanan Satuan:</strong> Pembayaran dilakukan 100% (Full Payment) di awal.</li>
+                <li>• <strong>Paket & Monthly:</strong> DP minimal 50%. Pelunasan di akhir periode atau setelah 50% kuota konten selesai.</li>
+                <li>• <strong>Masa Berlaku Paket:</strong> Fleksibel, kuota paket tidak harus habis dalam 1 bulan (maksimal penggunaan 2 bulan).</li>
+                <li>• <strong>Request Khusus:</strong> Desain non-sosial media (flyer, poster, dll) dapat memotong kuota paket atau ditagihkan terpisah.</li>
             </ul>
         </section>
     </main>
