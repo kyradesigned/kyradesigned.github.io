@@ -1,1 +1,0 @@
-# kyradesigned.github.io
