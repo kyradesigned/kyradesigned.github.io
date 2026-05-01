@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyra Designed - Ratecard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Palette warna diambil persis dari referensi logo */
+            --bg-color: #FDFBF5; /* Warm Cream */
+            --primary-color: #0B3D34; /* Deep Forest Green */
+            --border-light: rgba(11, 61, 52, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--primary-color); line-height: 1.6; }
+        
+        .container { max-width: 650px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Typography Header mirip logo */
+        header { text-align: center; padding: 70px 0 40px; }
+        header h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 5px; text-transform: uppercase; line-height: 1; }
+        header p { font-size: 0.95rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; }
+        
+        .service-category { margin-top: 55px; }
+        .service-category h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; text-transform: uppercase; letter-spacing: 1.5px; }
+        
+        /* Ikon bintang (✦) dari logo sebagai ornamen judul */
+        .service-category h2::before { content: "✦"; margin-right: 12px; font-size: 1.1rem; }
+        
+        .section-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-bottom: 25px; display: block; border-left: 2px solid var(--border-light); padding-left: 12px; }
+        
+        /* Gaya Clean & Flat (Outline Style) agar tidak berat */
+        .card { border: 1.5px solid var(--primary-color); padding: 25px 30px; border-radius: 12px; }
+        .card h3 { font-size: 0.9rem; font-weight: 700; margin: 25px 0 10px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px; }
+        .card h3:first-child { margin-top: 0; }
+
+        ul { list-style: none; }
+        ul li { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-light); font-size: 0.95rem; }
+        ul li:last-child { border-bottom: none; padding-bottom: 0; }
+        ul li strong { font-weight: 700; font-size: 1.05rem; }
+
+        /* Block Terms and Conditions warna Solid sebagai penyeimbang */
+        .terms { margin-top: 70px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
+        .terms h4 { margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; }
+        .terms h4::before { content: "✦"; margin-right: 12px; font-size: 1rem; color: var(--bg-color); }
+        .terms ul li { border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; padding: 12px 0; }
+        .terms ul li:last-child { border: none; padding-bottom: 0; }
+        
+        footer { text-align: center; padding: 20px 0 50px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 2.4rem; }
+            header p { font-size: 0.75rem; letter-spacing: 3px; }
+            .card { padding: 20px; }
+            .terms { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <h1>Kyra Designed</h1>
+        <p>Ratecard, Terms & Conditions</p>
+    </header>
+
+    <main class="container">
+        <section class="service-category">
+            <h2>Single Feed</h2>
+            <span class="section-note">Brief disediakan client / +Rp10.000 per slide jika request ide konten</span>
+            <div class="card">
+                <ul>
+                    <li>Single Design (1 slide) <strong>Rp50.000</strong></li>
+                    <li>Carousel (2-3 slide) <strong>Rp100.000</strong></li>
+                    <li>IG Story <strong>Rp45.000</strong></li>
+                    <li>IG Story Mirror Feeds <strong>Rp30.000</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="service-category">
+            <h2>Paket Konten (Kuota)</h2>
+            <span class="section-note">Include copywriting & content research/ideas</span>
+            <div class="card">
+                <ul>
+                    <li>6 Single Design <strong>Rp350.000</strong></li>
+                    <li>6 Carousel <strong>Rp750.000</strong></li>
+                    <li>9 Single Design <strong>Rp520.000</strong></li>
+                    <li>9 Carousel <strong>Rp1.100.000</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="service-category">
+            <h2>Monthly (Periode)</h2>
+            <span class="section-note">Include copywriting, plan, schedule & IG Story</span>
+            
+            <div class="card">
+                <h3>Paket 6 Konten</h3>
+                <ul>
+                    <li>6 Single + 3 Story <strong>Rp450.000</strong></li>
+                    <li>6 Carousel + 3 Story <strong>Rp850.000</strong></li>
+                    <li>6 Mix + 3 Story <strong>Rp650.000</strong></li>
+                </ul>
+
+                <h3>Paket 9 Konten</h3>
+                <ul>
+                    <li>9 Single + 3 Story <strong>Rp650.000</strong></li>
+                    <li>9 Carousel + 3 Story <strong>Rp1.200.000</strong></li>
+                    <li>9 Mix + 3 Story <strong>Rp950.000</strong></li>
+                </ul>
+
+                <h3>Paket 12 Konten</h3>
+                <ul>
+                    <li>12 Single + 4 Story <strong>Rp850.000</strong></li>
+                    <li>12 Carousel + 4 Story <strong>Rp1.550.000</strong></li>
+                    <li>12 Mix + 4 Story <strong>Rp1.250.000</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="terms">
+            <h4>Syarat & Ketentuan</h4>
+            <ul>
+                <li>DP 50% di awal pengerjaan.</li>
+                <li>Estimasi pengerjaan sesuai antrean dan tingkat kesulitan.</li>
+                <li>File master dikirim setelah pelunasan.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KYRA DESIGNED</p>
+    </footer>
+
+</body>
+</html>
