@@ -17,16 +17,17 @@
         
         .container { max-width: 650px; margin: 0 auto; padding: 0 24px; }
         
-        /* JALAN TENGAH: Padding-top diset ke 70px agar pas (tidak mepet, tidak kejauhan) */
-        header.container { text-align: center; padding-top: 70px; padding-bottom: 40px; }
+        /* JARAK DIPANGKAS DRASTIS: padding-top dan padding-bottom dikecilkan */
+        header.container { text-align: center; padding-top: 35px; padding-bottom: 20px; }
         header h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 5px; text-transform: uppercase; line-height: 1; }
         header p { font-size: 0.95rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; }
         
-        .service-category { margin-top: 55px; }
+        /* Jarak ke kategori (Single Feed dll) ditarik ke atas agar tidak renggang */
+        .service-category { margin-top: 35px; }
         .service-category h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; text-transform: uppercase; letter-spacing: 1.5px; }
         .service-category h2::before { content: "✦"; margin-right: 12px; font-size: 1.1rem; }
         
-        .section-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-bottom: 25px; display: block; border-left: 2px solid var(--border-light); padding-left: 12px; }
+        .section-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-bottom: 20px; display: block; border-left: 2px solid var(--border-light); padding-left: 12px; }
         
         .card { border: 1.5px solid var(--primary-color); padding: 25px 30px; border-radius: 12px; }
         .card h3 { font-size: 0.9rem; font-weight: 700; margin: 25px 0 10px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px; }
@@ -37,18 +38,19 @@
         ul li:last-child { border-bottom: none; padding-bottom: 0; }
         ul li strong { font-weight: 700; font-size: 1.05rem; }
 
-        .terms { margin-top: 70px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
+        .terms { margin-top: 50px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
         .terms h4 { margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; }
         .terms h4::before { content: "✦"; margin-right: 12px; font-size: 1rem; color: var(--bg-color); }
         .terms ul li { border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; padding: 12px 0; }
         .terms ul li:last-child { border: none; padding-bottom: 0; }
         
-        footer { text-align: center; padding: 20px 0 50px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
+        footer { text-align: center; padding: 10px 0 40px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
 
         @media (max-width: 480px) {
-            header.container { padding-top: 50px; padding-bottom: 30px; }
+            header.container { padding-top: 25px; padding-bottom: 15px; }
             header h1 { font-size: 2.4rem; }
             header p { font-size: 0.75rem; letter-spacing: 3px; }
+            .service-category { margin-top: 30px; }
             .card { padding: 20px; }
             .terms { padding: 30px 20px; }
         }
