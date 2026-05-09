@@ -17,7 +17,6 @@
         
         .container { max-width: 650px; margin: 0 auto; padding: 0 24px; }
         
-        /* Padding Header yang Ringkas */
         header.container { text-align: center; padding-top: 35px; padding-bottom: 20px; }
         header h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 5px; text-transform: uppercase; line-height: 1; }
         header p { font-size: 0.95rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; }
@@ -31,18 +30,19 @@
         .card { border: 1.5px solid var(--primary-color); padding: 25px 30px; border-radius: 12px; }
         .card h3 { font-size: 0.9rem; font-weight: 700; margin: 25px 0 10px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px; }
         .card h3:first-child { margin-top: 0; }
+        
+        /* Tambahan untuk note di dalam kotak card agar rapi */
+        .card-note { font-size: 0.75rem; font-style: italic; opacity: 0.7; display: block; margin-bottom: 15px; margin-top: -5px; }
 
         ul { list-style: none; }
         ul li { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-light); font-size: 0.95rem; }
         ul li:last-child { border-bottom: none; padding-bottom: 0; }
         ul li strong { font-weight: 700; font-size: 1.05rem; }
 
-        /* Block Terms and Conditions */
         .terms { margin-top: 50px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
         .terms h4 { margin-bottom: 15px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; color: var(--bg-color); opacity: 0.9; }
         .terms h4::before { content: "✦"; margin-right: 10px; font-size: 0.9rem; color: var(--bg-color); }
         
-        /* Penyesuaian List untuk T&C agar teks panjang turun dengan rapi */
         .terms ul li { display: block; border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; padding: 12px 0; line-height: 1.6; }
         .terms ul li:last-child { border: none; padding-bottom: 0; }
         .terms ul li strong { font-size: 0.85rem; color: #FDFBF5; letter-spacing: 0.5px; }
@@ -67,6 +67,7 @@
     </header>
 
     <main class="container">
+        <!-- Single Feed -->
         <section class="service-category">
             <h2>Single Feed</h2>
             <span class="section-note">Brief disediakan client / +Rp10.000 per slide jika request ide konten</span>
@@ -80,10 +81,20 @@
             </div>
         </section>
 
+        <!-- Paket Konten (Kuota) -->
         <section class="service-category">
             <h2>Paket Konten (Kuota)</h2>
-            <span class="section-note">Include copywriting & content research/ideas</span>
             <div class="card">
+                <h3>Design Only</h3>
+                <span class="card-note">Brief & materi disediakan oleh klien</span>
+                <ul>
+                    <li>10 Single Design <strong>Rp480.000</strong></li>
+                    <li>6 Carousel <strong>Rp590.000</strong></li>
+                    <li>6 Mix <strong>Rp480.000</strong></li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">All-In Content</h3>
+                <span class="card-note">Include content research, ideas & copywriting</span>
                 <ul>
                     <li>6 Single Design <strong>Rp350.000</strong></li>
                     <li>6 Carousel <strong>Rp750.000</strong></li>
@@ -93,6 +104,7 @@
             </div>
         </section>
 
+        <!-- Monthly -->
         <section class="service-category">
             <h2>Monthly (Periode)</h2>
             <span class="section-note">Include copywriting, plan, schedule & IG Story</span>
@@ -121,7 +133,7 @@
             </div>
         </section>
 
-        <!-- Terms and Conditions Diperbarui -->
+        <!-- Terms and Conditions -->
         <section class="terms">
             <h4>Ketentuan Umum & Pengerjaan</h4>
             <ul>
