@@ -21,31 +21,45 @@
         header h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 5px; text-transform: uppercase; line-height: 1; }
         header p { font-size: 0.95rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; }
         
-        .service-category { margin-top: 35px; }
-        .service-category h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; text-transform: uppercase; letter-spacing: 1.5px; }
+        .service-category { margin-top: 40px; }
+        .service-category h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; text-transform: uppercase; letter-spacing: 1.5px; }
         .service-category h2::before { content: "✦"; margin-right: 12px; font-size: 1.1rem; }
         
-        .section-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-bottom: 20px; display: block; border-left: 2px solid var(--border-light); padding-left: 12px; }
+        /* Modifikasi untuk limited slot */
+        .limited-slot { font-weight: 400; font-style: italic; font-size: 0.9rem; text-transform: none; margin-left: 8px; opacity: 0.8; letter-spacing: 0; }
+
+        .section-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-bottom: 20px; display: block; border-left: 2px solid var(--border-light); padding-left: 12px; line-height: 1.5; }
         
         .card { border: 1.5px solid var(--primary-color); padding: 25px 30px; border-radius: 12px; }
         .card h3 { font-size: 0.9rem; font-weight: 700; margin: 25px 0 10px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px dashed var(--border-light); padding-bottom: 8px; }
         .card h3:first-child { margin-top: 0; }
         
-        /* Tambahan untuk note di dalam kotak card agar rapi */
-        .card-note { font-size: 0.75rem; font-style: italic; opacity: 0.7; display: block; margin-bottom: 15px; margin-top: -5px; }
-
         ul { list-style: none; }
-        ul li { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-light); font-size: 0.95rem; }
+        ul li { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-light); font-size: 0.95rem; line-height: 1.4; align-items: center;}
         ul li:last-child { border-bottom: none; padding-bottom: 0; }
-        ul li strong { font-weight: 700; font-size: 1.05rem; }
+        
+        /* Penyesuaian teks item agar rapi jika kepanjangan */
+        ul li span.item-name { flex: 1; padding-right: 15px; }
+        ul li span.item-desc { display: block; font-size: 0.75rem; font-weight: 400; font-style: italic; opacity: 0.7; margin-top: 4px; }
+        ul li strong { font-weight: 700; font-size: 1.05rem; white-space: nowrap; text-align: right; }
 
-        .terms { margin-top: 50px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
-        .terms h4 { margin-bottom: 15px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; color: var(--bg-color); opacity: 0.9; }
+        /* Block Terms and Conditions */
+        .terms { margin-top: 55px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
+        .terms h4 { margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; color: var(--bg-color); opacity: 0.9; }
         .terms h4::before { content: "✦"; margin-right: 10px; font-size: 0.9rem; color: var(--bg-color); }
         
-        .terms ul li { display: block; border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; padding: 12px 0; line-height: 1.6; }
-        .terms ul li:last-child { border: none; padding-bottom: 0; }
-        .terms ul li strong { font-size: 0.85rem; color: #FDFBF5; letter-spacing: 0.5px; }
+        /* List bergaya penomoran untuk S&K */
+        .terms ol { padding-left: 20px; }
+        .terms ol > li { padding: 12px 0; border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; line-height: 1.6; }
+        .terms ol > li:last-child { border-bottom: none; }
+        .terms ol li strong { font-weight: 700; color: #FDFBF5; letter-spacing: 0.3px; }
+        
+        /* Sub-list untuk pembayaran (a, b, c) */
+        .terms ol li ol { list-style-type: lower-alpha; padding-left: 15px; margin-top: 8px; margin-bottom: 4px; }
+        .terms ol li ol > li { padding: 4px 0; border: none; font-size: 0.85rem; }
+
+        /* Catatan di bawah S&K */
+        .terms-note { display: block; margin-top: 25px; font-size: 0.8rem; font-style: italic; opacity: 0.8; line-height: 1.5; border-top: 1px dashed rgba(253, 251, 245, 0.2); padding-top: 20px; }
         
         footer { text-align: center; padding: 10px 0 40px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
 
@@ -53,9 +67,12 @@
             header.container { padding-top: 25px; padding-bottom: 15px; }
             header h1 { font-size: 2.4rem; }
             header p { font-size: 0.75rem; letter-spacing: 3px; }
-            .service-category { margin-top: 30px; }
+            .service-category { margin-top: 35px; }
             .card { padding: 20px; }
             .terms { padding: 30px 20px; }
+            ul li { flex-direction: column; align-items: flex-start; }
+            ul li span.item-name { padding-right: 0; margin-bottom: 8px; }
+            ul li strong { align-self: flex-start; }
         }
     </style>
 </head>
@@ -67,88 +84,95 @@
     </header>
 
     <main class="container">
-        <!-- Single Feed -->
+        <!-- 1. SINGLE FEED -->
         <section class="service-category">
             <h2>Single Feed</h2>
-            <span class="section-note">Brief disediakan client / +Rp10.000 per slide jika request ide konten</span>
+            <span class="section-note">Brief disediakan client / +Rp15.000 per slide jika request ide konten</span>
             <div class="card">
                 <ul>
-                    <li>Single Design (1 slide) <strong>Rp50.000</strong></li>
-                    <li>Carousel (2-3 slide) <strong>Rp100.000</strong></li>
-                    <li>IG Story <strong>Rp45.000</strong></li>
-                    <li>IG Story Mirror Feeds <strong>Rp30.000</strong></li>
+                    <li><span class="item-name">Single Design (1 slide)</span> <strong>Rp50.000</strong></li>
+                    <li><span class="item-name">Carousel (max 3 slide)</span> <strong>Rp100.000</strong></li>
+                    <li><span class="item-name">IG Story</span> <strong>Rp45.000</strong></li>
+                    <li><span class="item-name">IG Story Mirror Feed</span> <strong>+Rp30.000</strong></li>
                 </ul>
             </div>
         </section>
 
-        <!-- Paket Konten (Kuota) -->
+        <!-- 2. PAKET KONTEN FEEDS (KUOTA) -->
         <section class="service-category">
-            <h2>Paket Konten (Kuota)</h2>
+            <h2>Paket Konten Feeds (Kuota)</h2>
+            <span class="section-note">Include: design only, format PNG/JPG<br>Brief & materi disediakan oleh klien</span>
             <div class="card">
-                <h3>Design Only</h3>
-                <span class="card-note">Brief & materi disediakan oleh klien</span>
                 <ul>
-                    <li>10 Single Design <strong>Rp480.000</strong></li>
-                    <li>6 Carousel <strong>Rp590.000</strong></li>
-                    <li>6 Mix <strong>Rp480.000</strong></li>
-                </ul>
-
-                <h3 style="margin-top: 30px;">All-In Content</h3>
-                <span class="card-note">Include content research, ideas & copywriting</span>
-                <ul>
-                    <li>6 Single Design <strong>Rp350.000</strong></li>
-                    <li>6 Carousel <strong>Rp750.000</strong></li>
-                    <li>9 Single Design <strong>Rp520.000</strong></li>
-                    <li>9 Carousel <strong>Rp1.100.000</strong></li>
+                    <li><span class="item-name">10 Single Feed Design</span> <strong>Rp490.000</strong></li>
+                    <li><span class="item-name">6 Carousel Feed Design <span class="item-desc">(max 3 slide)</span></span> <strong>Rp590.000</strong></li>
+                    <li><span class="item-name">6 Mix Feed Design <span class="item-desc">(max 4 carousel dengan max 3 slide)</span></span> <strong>Rp490.000</strong></li>
                 </ul>
             </div>
         </section>
 
-        <!-- Monthly -->
+        <!-- 3. ALL IN SOCIAL MEDIA -->
         <section class="service-category">
-            <h2>Monthly (Periode)</h2>
-            <span class="section-note">Include copywriting, plan, schedule & IG Story</span>
-            
+            <h2>All In Social Media <span class="limited-slot">(Limited slot)</span></h2>
+            <span class="section-note">Include content plan, caption & schedule (tidak include admin)<br>Tidak berlaku untuk agency dan retail</span>
             <div class="card">
-                <h3>Paket 6 Konten</h3>
                 <ul>
-                    <li>6 Single + 3 Story <strong>Rp450.000</strong></li>
-                    <li>6 Carousel + 3 Story <strong>Rp850.000</strong></li>
-                    <li>6 Mix + 3 Story <strong>Rp650.000</strong></li>
-                </ul>
-
-                <h3>Paket 9 Konten</h3>
-                <ul>
-                    <li>9 Single + 3 Story <strong>Rp650.000</strong></li>
-                    <li>9 Carousel + 3 Story <strong>Rp1.200.000</strong></li>
-                    <li>9 Mix + 3 Story <strong>Rp950.000</strong></li>
-                </ul>
-
-                <h3>Paket 12 Konten</h3>
-                <ul>
-                    <li>12 Single + 4 Story <strong>Rp850.000</strong></li>
-                    <li>12 Carousel + 4 Story <strong>Rp1.550.000</strong></li>
-                    <li>12 Mix + 4 Story <strong>Rp1.250.000</strong></li>
+                    <li><span class="item-name">6 Single Design</span> <strong>Rp400.000</strong></li>
+                    <li><span class="item-name">6 Carousel <span class="item-desc">(max 3 slide)</span></span> <strong>Rp710.000</strong></li>
+                    <li><span class="item-name">6 Mix <span class="item-desc">(max 4 carousel dengan max 3 slide)</span></span> <strong>Rp610.000</strong></li>
                 </ul>
             </div>
         </section>
 
-        <!-- Terms and Conditions -->
+        <!-- 4. STORY IG (ADD-ON) -->
+        <section class="service-category">
+            <h2>Story IG (Add-on)</h2>
+            <span class="section-note">Sistem add-on paket / paket terpisah</span>
+            <div class="card">
+                <ul>
+                    <li><span class="item-name">4 Story</span> <strong>Rp170.000</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. DESAIN PRINT (CETAK) -->
+        <section class="service-category">
+            <h2>Desain Print (Cetak)</h2>
+            <div class="card">
+                <ul>
+                    <li><span class="item-name">Flyer / Brosur max. A3 <span class="item-desc">(Bolak-balik Rp120.000)</span></span> <strong>Rp75.000</strong></li>
+                    <li><span class="item-name">Poster A1, A2</span> <strong>Rp100.000</strong></li>
+                    <li><span class="item-name">Spanduk / Banner di bawah 2m</span> <strong>Rp100.000</strong></li>
+                    <li><span class="item-name">Spanduk / Banner di atas 2m</span> <strong>Rp150.000</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 6. SYARAT & KETENTUAN -->
         <section class="terms">
-            <h4>Ketentuan Umum & Pengerjaan</h4>
-            <ul>
-                <li>• Pengerjaan dimulai setelah konfirmasi pembayaran dan seluruh materi (brief, foto, referensi) diterima.</li>
-                <li>• Revisi maksimal 3x minor per desain (tidak mengubah konsep awal).</li>
-                <li>• Hasil akhir dikirim dalam format resolusi tinggi (JPG/PNG). Permintaan master file dikenakan biaya tambahan.</li>
-            </ul>
-
-            <h4 style="margin-top: 35px;">Sistem Pembayaran & Paket</h4>
-            <ul>
-                <li>• <strong>Layanan Satuan:</strong> Pembayaran dilakukan 100% (Full Payment) di awal.</li>
-                <li>• <strong>Paket & Monthly:</strong> DP minimal 50%. Pelunasan di akhir periode atau setelah 50% kuota konten selesai.</li>
-                <li>• <strong>Masa Berlaku Paket:</strong> Fleksibel, kuota paket tidak harus habis dalam 1 bulan (maksimal penggunaan 2 bulan).</li>
-                <li>• <strong>Request Khusus:</strong> Desain non-sosial media (flyer, poster, dll) dapat memotong kuota paket atau ditagihkan terpisah.</li>
-            </ul>
+            <h4>Syarat & Ketentuan</h4>
+            <ol>
+                <li>Estimasi pengerjaan 2–3 hari kerja per konten (setelah brief lengkap diterima). Timeline dapat berubah sesuai proses revisi.</li>
+                <li>Revisi maksimal 3x per konten, termasuk 1 kali major revision (perubahan konsep). Revisi di luar ketentuan dapat dikenakan biaya tambahan.</li>
+                <li>File akhir diberikan dalam format JPG/PNG. <strong>Permintaan master file/source file (AI/PSD, dll.) dikenakan biaya tambahan sebesar 100% dari harga desain terkait.</strong></li>
+                <li>Pembayaran:
+                    <ol>
+                        <li>Request satuan pembayaran full payment di awal.</li>
+                        <li>Paket desain DP minimal 50% sebelum pengerjaan dimulai.</li>
+                        <li>Pelunasan dilakukan setelah seluruh desain disetujui dan sebelum file final dikirim.</li>
+                    </ol>
+                </li>
+                <li>Paket dapat digunakan maksimal 2 bulan sejak pembayaran pertama. Konten yang belum digunakan setelah masa berlaku berakhir dianggap hangus.</li>
+                <li><strong>Carousel maksimal 3 slide, dengan add-on Rp25.000/slide.</strong></li>
+                <li>Tidak termasuk desain di luar kategori sosial media (banner, poster, brosur, dll.)</li>
+                <li>Pengerjaan dimulai setelah konfirmasi pembayaran dan seluruh materi konten pertama (brief, copywriting, foto, logo, referensi, dll.) diterima.</li>
+                <li>Kedua belah pihak dapat melakukan tinjauan ulang kerjasama setelah setengah paket desain terpenuhi.</li>
+            </ol>
+            
+            <span class="terms-note">
+                * Note: Jika ada kebutuhan paket custom bisa didiskusikan dengan designer.<br>
+                * Hal-hal di luar ketentuan di atas dapat didiskusikan dan disesuaikan berdasarkan persetujuan kedua belah pihak.
+            </span>
         </section>
     </main>
 
