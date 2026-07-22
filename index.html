@@ -25,7 +25,6 @@
         .service-category h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; text-transform: uppercase; letter-spacing: 1.5px; }
         .service-category h2::before { content: "✦"; margin-right: 12px; font-size: 1.1rem; }
         
-        /* Modifikasi untuk limited slot */
         .limited-slot { font-weight: 400; font-style: italic; font-size: 0.9rem; text-transform: none; margin-left: 8px; opacity: 0.8; letter-spacing: 0; }
 
         .section-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-bottom: 20px; display: block; border-left: 2px solid var(--border-light); padding-left: 12px; line-height: 1.5; }
@@ -38,27 +37,28 @@
         ul li { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-light); font-size: 0.95rem; line-height: 1.4; align-items: center;}
         ul li:last-child { border-bottom: none; padding-bottom: 0; }
         
-        /* Penyesuaian teks item agar rapi jika kepanjangan */
         ul li span.item-name { flex: 1; padding-right: 15px; }
         ul li span.item-desc { display: block; font-size: 0.75rem; font-weight: 400; font-style: italic; opacity: 0.7; margin-top: 4px; }
         ul li strong { font-weight: 700; font-size: 1.05rem; white-space: nowrap; text-align: right; }
 
+        /* PERBAIKAN: Catatan Custom Package di luar kotak S&K */
+        /* Margin-top diperbesar menjadi 25px dan font-size diperkecil menjadi 0.75rem */
+        .custom-note { display: block; margin-top: 25px; font-size: 0.75rem; font-style: italic; font-weight: 500; text-align: center; opacity: 0.8; }
+
         /* Block Terms and Conditions */
-        .terms { margin-top: 55px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
+        .terms { margin-top: 45px; padding: 40px 30px; background: var(--primary-color); color: var(--bg-color); border-radius: 12px; margin-bottom: 40px; }
         .terms h4 { margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; color: var(--bg-color); opacity: 0.9; }
         .terms h4::before { content: "✦"; margin-right: 10px; font-size: 0.9rem; color: var(--bg-color); }
         
-        /* List bergaya penomoran untuk S&K */
         .terms ol { padding-left: 20px; }
         .terms ol > li { padding: 12px 0; border-bottom: 1px solid rgba(253, 251, 245, 0.15); font-size: 0.85rem; line-height: 1.6; }
         .terms ol > li:last-child { border-bottom: none; }
         .terms ol li strong { font-weight: 700; color: #FDFBF5; letter-spacing: 0.3px; }
         
-        /* Sub-list untuk pembayaran (a, b, c) */
         .terms ol li ol { list-style-type: lower-alpha; padding-left: 15px; margin-top: 8px; margin-bottom: 4px; }
         .terms ol li ol > li { padding: 4px 0; border: none; font-size: 0.85rem; }
 
-        /* Catatan di bawah S&K */
+        /* Catatan di dalam kotak S&K */
         .terms-note { display: block; margin-top: 25px; font-size: 0.8rem; font-style: italic; opacity: 0.8; line-height: 1.5; border-top: 1px dashed rgba(253, 251, 245, 0.2); padding-top: 20px; }
         
         footer { text-align: center; padding: 10px 0 40px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0.7; }
@@ -114,7 +114,7 @@
         <!-- 3. ALL IN SOCIAL MEDIA -->
         <section class="service-category">
             <h2>All In Social Media <span class="limited-slot">(Limited slot)</span></h2>
-            <span class="section-note">Include: content plan, caption & schedule (tidak include admin)<br>Tidak berlaku untuk retail (khusus agency ada penyesuaian)</span>
+            <span class="section-note">Include: content plan, caption & schedule (tidak include admin)<br>Tidak berlaku untuk agency dan retail</span>
             <div class="card">
                 <ul>
                     <li><span class="item-name">6 Single Design</span> <strong>Rp400.000</strong></li>
@@ -146,7 +146,7 @@
                     <li><span class="item-name">Spanduk / Banner di atas 2m</span> <strong>Rp150.000</strong></li>
                 </ul>
             </div>
-
+            
             <!-- Catatan Custom Paket diletakkan di luar S&K -->
             <span class="custom-note">* Note: Jika ada kebutuhan paket custom bisa didiskusikan dengan designer.</span>
         </section>
@@ -172,6 +172,7 @@
                 <li>Kedua belah pihak dapat melakukan tinjauan ulang kerjasama setelah setengah paket desain terpenuhi.</li>
             </ol>
             
+            <!-- Penutup S&K -->
             <span class="terms-note">
                 * Hal-hal di luar ketentuan di atas dapat didiskusikan dan disesuaikan berdasarkan persetujuan kedua belah pihak.
             </span>
